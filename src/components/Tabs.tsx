@@ -37,7 +37,7 @@ export function Tabs() {
           ref={overflowContainer}
           style={{
             overflow: "hidden",
-            maxWidth: "85%",
+            maxWidth: "82%",
           }}
         >
           <TabNav tabs={dashboards} />
@@ -53,23 +53,7 @@ export function Tabs() {
               onClick: () => selectDashboard(tab.id),
             }))}
           />
-          {hiddenTabs.length === 0 ? (
-            <Button
-              icon={{ name: "general.plus", color: "#fff", size: "sm" }}
-              onClick={addDashboard}
-              tooltip={{ title: "Add a dashboard", placement: "top" }}
-              paddingHorizontal={2}
-              paddingVertical={1.75}
-              css={{
-                borderBottomLeftRadius: 0,
-                borderBottomRightRadius: 0,
-                backgroundColor: "hsl(221, 90%, 45%)",
-                "&:hover": {
-                  backgroundColor: "hsl(221, 90%, 50%)",
-                },
-              }}
-            />
-          ) : (
+          {hiddenTabs.length !== 0 && (
             <Dropdown
               triggerElement={
                 <Box
@@ -105,6 +89,21 @@ export function Tabs() {
               </Dropdown.Item>
             </Dropdown>
           )}
+          <Button
+            icon={{ name: "general.plus", color: "#fff", size: "sm" }}
+            onClick={addDashboard}
+            tooltip={{ title: "Add a dashboard", placement: "top" }}
+            paddingHorizontal={2}
+            paddingVertical={1.75}
+            css={{
+              borderBottomLeftRadius: 0,
+              borderBottomRightRadius: 0,
+              backgroundColor: "hsl(221, 90%, 45%)",
+              "&:hover": {
+                backgroundColor: "hsl(221, 90%, 50%)",
+              },
+            }}
+          />
         </StackView>
       </StackView>
     </StackView>
