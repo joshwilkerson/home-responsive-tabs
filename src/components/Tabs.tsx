@@ -84,9 +84,6 @@ export function Tabs() {
                   {tab.label}
                 </Dropdown.Item>
               ))}
-              <Dropdown.Item onClick={addDashboard}>
-                Add dashboard
-              </Dropdown.Item>
             </Dropdown>
           )}
           <Button
