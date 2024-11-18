@@ -17,9 +17,6 @@ const initialDashboards = [
   { label: "My Dashboard", id: "1" },
   { label: "Another Dashboard", id: "2" },
   { label: "Some Cool Stuff", id: "3" },
-  { label: "Josh's Widgets", id: "4" },
-  { label: "Groups", id: "5" },
-  { label: "Church Attendance", id: "6" },
 ]
 
 export const DashboardsProvider = ({ children }: { children: ReactNode }) => {
